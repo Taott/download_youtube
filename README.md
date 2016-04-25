@@ -8,8 +8,9 @@ Here is the easiest way.
 
     get = GetUrl('https://www.youtube.com/watch?v=Czy0pXRRZcs', choose=0)
     choose = get.get_choose()
+    status_url = get.get_statusurl()
     while True:
-        print get.get_status(choose)
+        print get.get_status(status_url)
 
 
 You can use http proxy to avoid google CAPTCHA.
