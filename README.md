@@ -6,9 +6,9 @@ It's very easy to use it.
 Parameter choose is to choose 4k, 1440p, 1080p and so on.
 Here is the easiest way.
 
-    get = GetUrl('https://www.youtube.com/watch?v=Czy0pXRRZcs', choose=0)
-    choose = get.get_choose()
-    status_url = get.get_statusurl()
+    get = GetUrl('https://www.youtube.com/watch?v=Czy0pXRRZcs')
+    print get.get_choose()
+    status_url = get.get_statusurl(0)
     while True:
         print get.get_status(status_url)
 
