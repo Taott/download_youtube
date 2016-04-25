@@ -6,8 +6,7 @@ import re
 
 
 class GetUrl():
-    def __init__(self, youtube_url, **kw):
-        self.choose = kw.get('choose')
+    def __init__(self, youtube_url):
         self.youtube_url = youtube_url
         # self.proxy_handler = urllib2.ProxyHandler({"http" : 'http://ip:port'})
         # self.opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.CookieJar()), self.proxy_handler)
@@ -43,8 +42,8 @@ class GetUrl():
         return json.dumps(self.video_info.get('url'))
 
 
-    def get_statusurl(self):
-        self.values['url'] = self.video_info['url'][self.choose]['url']
+    def get_statusurl(self, choose):
+        self.values['url'] = self.video_info['url'][choose]['url']
         self.values['verify'] = self.video_info['verify']
         self.values['videoid'] = self.video_info['videoid']
         self.values['server'] = self.video_info['server']
